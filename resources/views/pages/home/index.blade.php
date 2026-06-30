@@ -1,21 +1,22 @@
 @extends('layouts.app')
 
+
+
 @section('content')
 
-<div class="flex min-h-screen items-center justify-center">
+<x-navbar />
 
-    <div class="text-center">
+<div class="pt-24"></div>
 
-        <h1 class="text-5xl font-bold">
-            MB STORE
-        </h1>
+<x-hero />
 
-        <p class="mt-3 text-white/80">
-            Trusted Game Account Marketplace
-        </p>
 
-    </div>
+<x-category />
 
-</div>
+<x-catalog :accounts="$accounts"/>
+
+<x-stats />
+
+<x-testimonials :testimonials="$testimonials" />
 
 @endsection
